@@ -19,9 +19,11 @@ export default function Informazioni() {
           </p>
         </section>
 
-        {/* SEZIONE 2: Griglia di due foto */}
+       {/* SEZIONE 2: Griglia Foto (Sinistra) e Video (Destra) - Formato Verticale */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-          <div className="relative h-[400px] overflow-hidden rounded-2xl">
+          
+          {/* Foto a sinistra - Formato Verticale */}
+          <div className="relative h-[600px] overflow-hidden rounded-3xl shadow-sm">
             <Image 
               src="/interno01.jpg" 
               alt="Interni Civico 2" 
@@ -29,14 +31,21 @@ export default function Informazioni() {
               className="object-cover"
             />
           </div>
-          <div className="relative h-[400px] overflow-hidden rounded-2xl">
-            <Image 
-              src="/pomodoro-napoli.jpg" 
-              alt="Pizzeria Gourmet Carpi" 
-              fill 
-              className="object-cover"
-            />
+
+          {/* Video a destra - Formato Verticale */}
+          <div className="relative h-[600px] overflow-hidden rounded-3xl shadow-sm bg-gray-100">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/pizza01.mp4" type="video/mp4" />
+              Il tuo browser non supporta il formato video.
+            </video>
           </div>
+
         </section>
 
         {/* SEZIONE 3: Di nuovo Titolo e Testo */}
