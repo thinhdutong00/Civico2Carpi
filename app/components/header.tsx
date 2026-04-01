@@ -8,7 +8,7 @@ export default function header() {
           CIVICO 2
         </div>
         <nav className="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-[#642d3a]">
-          <a href="#menu" className="hover:opacity-60 transition">Menu</a>
+          <a href="/informazioni" className="hover:opacity-60 transition">informazioni</a>
           <a href="#galleria" className="hover:opacity-60 transition">Galleria</a>
           <a href="#contatti" className="hover:opacity-60 transition">Dove siamo</a>
         </nav>
