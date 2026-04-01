@@ -67,8 +67,8 @@ export default function Home() {
             <div className="w-full md:w-1/2 space-y-8">
               <h2 className="text-[#455970]/30 text-sm font-black uppercase tracking-[0.4em]">La Filosofia</h2>
               <h3 className="text-5xl md:text-7xl font-bold leading-tight tracking-tighter">
-                una<br />
-                <span className="text-[#ffefcc] bg-[#455970] px-4 py-1 inline-block">Cucina</span> Gourmet.
+                Una cucina<br />
+                <span className="text-[#ffefcc] bg-[#455970] px-4 py-1 inline-block">Gourmet</span>
               </h3>
               <p className="text-xl text-gray-500 leading-relaxed max-w-md">
                 Qui, offriamo le migliori pizze e pinse, preparate con ingredienti di alta qualità e originalità. Il nostro menu è stato progettato per soddisfare le esigenze di ogni palato, dai più tradizionali ai più avventurosi. Se sei alla ricerca di un ristorante che offra un'esperienza gastronomica unica, allora non perderti la nostra.
