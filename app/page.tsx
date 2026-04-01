@@ -67,11 +67,11 @@ export default function Home() {
             <div className="w-full md:w-1/2 space-y-8">
               <h2 className="text-[#455970]/30 text-sm font-black uppercase tracking-[0.4em]">La Filosofia</h2>
               <h3 className="text-5xl md:text-7xl font-bold leading-tight tracking-tighter">
-                L'equilibrio tra <br />
-                <span className="text-[#ffefcc] bg-[#455970] px-4 py-1 inline-block">tempo</span> e sapore.
+                Una<br />
+                <span className="text-[#ffefcc] bg-[#455970] px-4 py-1 inline-block">cucina</span> gourmet.
               </h3>
               <p className="text-xl text-gray-500 leading-relaxed max-w-md">
-                Ogni impasto matura per 48 ore in ambiente controllato. È il nostro segreto per una digeribilità superiore e una struttura alveolata senza pari.
+                Qui, offriamo le migliori pizze e pinse, preparate con ingredienti di alta qualità e originalità. Il nostro menu è stato progettato per soddisfare le esigenze di ogni palato, dai più tradizionali ai più avventurosi. Se sei alla ricerca di un ristorante che offra un'esperienza gastronomica unica, allora non perderti la nostra.
               </p>
               <div className="pt-6">
                 <a href="/informazioni" className="text-[#455970] font-black border-b-2 border-[#ffefcc] pb-2 hover:border-[#455970] transition-all uppercase text-xs tracking-widest">
