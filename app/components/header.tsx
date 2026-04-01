@@ -9,10 +9,10 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Gestione apertura menu con blocco scroll body
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
+    const nextState = !isOpen;
+    setIsOpen(nextState);
+    if (nextState) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -28,7 +28,7 @@ export default function Header() {
       }
 
       if (window.scrollY > lastScrollY && window.scrollY > 150) {
-        setIsVisible(false); 
+        if (!isOpen) setIsVisible(false); // Nascondi solo se il menu è chiuso
         setIsCucinaOpen(false);
       } else {
         setIsVisible(true); 
@@ -37,104 +37,84 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', controlHeader);
-    return () => window.removeEventListener('scroll', controlHeader);
-  }, [lastScrollY]);
+    return () => {
+      window.removeEventListener('scroll', controlHeader);
+      document.body.style.overflow = 'unset'; // Reset in caso di smontaggio
+    };
+  }, [lastScrollY, isOpen]);
 
   return (
-    <header 
-      className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out border-b border-gray-100 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      } ${
-        isScrolled ? 'py-2 shadow-md bg-white/95 backdrop-blur-md' : 'py-4 bg-white'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center transition-all duration-500">
-        
-        {/* LOGO - Diventa bianco quando l'overlay scuro è aperto */}
-        <a href="/" className={`relative transition-all duration-500 ${isScrolled ? 'w-48 h-14' : 'w-64 h-20'} flex items-center z-[210]`}>
-          <Image 
-            src="/logo.png" 
-            alt="Civico 2 Logo" 
-            fill 
-            className={`object-contain object-left transition-all duration-500 ${!isScrolled ? 'scale-110' : 'scale-100'} ${isOpen ? 'brightness-0 invert' : ''}`} 
-            priority 
-          />
-        </a>
-
-        {/* NAVBAR DESKTOP */}
-        <nav className="hidden md:flex items-center space-x-10 text-[13px] uppercase tracking-[0.2em] font-bold text-[#455970]">
-          <a href="/" className="group relative py-2">
-            Civico2
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
-          </a>
+    <>
+      <header 
+        className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out border-b border-gray-100 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        } ${
+          isScrolled ? 'py-2 shadow-md bg-white/95 backdrop-blur-md' : 'py-4 bg-white'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           
-          <a href="/informazioni" className="group relative py-2">
-            Informazioni
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
+          {/* LOGO */}
+          <a href="/" className={`relative transition-all duration-500 ${isScrolled ? 'w-48 h-14' : 'w-64 h-20'} flex items-center z-[210]`}>
+            <Image 
+              src="/logo.png" 
+              alt="Civico 2 Logo" 
+              fill 
+              className={`object-contain object-left transition-all duration-500 ${isOpen ? 'brightness-0 invert' : ''}`} 
+              priority 
+            />
           </a>
-          
-          <div 
-            className="relative cursor-pointer group"
-            onMouseEnter={() => setIsCucinaOpen(true)}
-            onMouseLeave={() => setIsCucinaOpen(false)}
-          >
-            <span className="flex items-center gap-1.5 py-2 group-hover:opacity-70 transition-all">
-              Cucina
-              <svg className={`w-3 h-3 transition-transform duration-300 ${isCucinaOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
 
-            <div className={`absolute top-full left-[-20px] w-56 bg-white border border-gray-100 shadow-2xl rounded-2xl py-5 transition-all duration-300 ${
-              isCucinaOpen ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'
-            }`}>
-              <a href="/menu" className="px-8 py-3 block text-[#455970] hover:bg-[#455970]/5 transition-colors">Il Menù</a>
-              <a href="/ingredienti" className="px-8 py-3 block text-[#455970] hover:bg-[#455970]/5 transition-colors">Ingredienti</a>
+          {/* NAVBAR DESKTOP */}
+          <nav className="hidden md:flex items-center space-x-10 text-[13px] uppercase tracking-[0.2em] font-bold text-[#455970]">
+            <a href="/" className="group relative py-2">Civico2 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span></a>
+            <a href="/informazioni" className="group relative py-2">Informazioni <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span></a>
+            
+            <div className="relative cursor-pointer group" onMouseEnter={() => setIsCucinaOpen(true)} onMouseLeave={() => setIsCucinaOpen(false)}>
+              <span className="flex items-center gap-1.5 py-2 group-hover:opacity-70 transition-all">
+                Cucina
+                <svg className={`w-3 h-3 transition-transform duration-300 ${isCucinaOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" /></svg>
+              </span>
+              <div className={`absolute top-full left-[-20px] w-56 bg-white border border-gray-100 shadow-2xl rounded-2xl py-5 transition-all duration-300 ${isCucinaOpen ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'}`}>
+                <a href="/menu" className="px-8 py-3 block text-[#455970] hover:bg-[#455970]/5 transition-colors">Il Menù</a>
+                <a href="/ingredienti" className="px-8 py-3 block text-[#455970] hover:bg-[#455970]/5 transition-colors">Ingredienti</a>
+              </div>
             </div>
+            <a href="/contatti" className="group relative py-2">Contatti <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span></a>
+          </nav>
+
+          {/* BOTTONE DESKTOP */}
+          <div className="hidden md:block">
+            <a href="tel:0598752431" className="bg-[#455970] text-white px-8 py-3 rounded-full text-xs font-black tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#455970]/20">PRENOTA ORA</a>
           </div>
 
-          <a href="/contatti" className="group relative py-2">
-            Contatti
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </nav>
-
-        {/* BOTTONE PREMIUM DESKTOP */}
-        <div className="hidden md:block">
-          <a 
-            href="tel:0598752431" 
-            className="bg-[#455970] text-white px-8 py-3 rounded-full text-xs font-black tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#455970]/20"
+          {/* HAMBURGER BUTTON */}
+          <button 
+            onClick={toggleMenu}
+            className={`md:hidden p-2 z-[210] transition-colors duration-300 focus:outline-none ${isOpen ? 'text-white' : 'text-[#455970]'}`}
           >
-            PRENOTA ORA
-          </a>
+            <div className="w-8 h-5 flex flex-col justify-between">
+              <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+              <span className={`h-0.5 w-full bg-current duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </div>
+          </button>
         </div>
+      </header>
 
-        {/* HAMBURGER BUTTON - Cambia colore in bianco quando aperto */}
-        <button 
-          onClick={toggleMenu}
-          className={`md:hidden p-2 z-[210] transition-colors duration-300 ${isOpen ? 'text-white' : 'text-[#455970]'}`}
-        >
-          <div className="w-8 h-5 flex flex-col justify-between">
-            <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
-            <span className={`h-0.5 w-full bg-current duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-          </div>
-        </button>
-      </div>
-
-      {/* OVERLAY MOBILE - Sfondo solido #455970 per massima leggibilità */}
-      <div className={`fixed inset-0 bg-[#455970] z-[200] transition-all duration-500 ease-in-out ${
-        isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-      } md:hidden`}>
+      {/* OVERLAY MOBILE - SPOSTATO FUORI DALL'HEADER PER EVITARE EREDITARIETÀ CSS */}
+      <div className={`fixed inset-0 z-[150] transition-all duration-500 ease-in-out md:hidden ${
+        isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
+      }`} style={{ backgroundColor: '#455970' }}>
         
-        {/* Cerchi decorativi per un tocco premium */}
+        {/* Cerchi decorativi */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#ffefcc]/5 rounded-full -ml-32 -mb-32 blur-3xl" />
         
-        <div className="flex flex-col h-full px-12 justify-center space-y-10">
+        <div className="flex flex-col h-full px-12 justify-center space-y-10 relative z-10">
           <nav className="flex flex-col space-y-8 text-left">
-            <a href="/" onClick={toggleMenu} className="text-5xl font-black text-white tracking-tighter hover:text-[#ffefcc] transition-colors">Civico 2</a>
-            <a href="/informazioni" onClick={toggleMenu} className="text-4xl font-bold text-white/90 tracking-tighter hover:text-[#ffefcc] transition-colors">Storia</a>
+            <a href="/" onClick={toggleMenu} className="text-5xl font-black text-white tracking-tighter">Civico 2</a>
+            <a href="/informazioni" onClick={toggleMenu} className="text-4xl font-bold text-white/90 tracking-tighter">Storia</a>
             
             <div className="space-y-4">
                <p className="text-[#ffefcc] text-[10px] font-black uppercase tracking-[0.3em] opacity-60">Esplora la cucina</p>
@@ -144,7 +124,7 @@ export default function Header() {
                </div>
             </div>
 
-            <a href="/contatti" onClick={toggleMenu} className="text-4xl font-bold text-white tracking-tighter hover:text-[#ffefcc] transition-colors">Contatti</a>
+            <a href="/contatti" onClick={toggleMenu} className="text-4xl font-bold text-white tracking-tighter">Contatti</a>
             
             <div className="pt-6">
               <a 
@@ -156,13 +136,12 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Info di servizio in basso */}
           <div className="absolute bottom-12 left-12 space-y-1">
             <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Via L. A. Muratori, 47</p>
             <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">41012 Carpi (MO)</p>
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
