@@ -9,65 +9,64 @@ export default function Footer() {
           
           {/* COLONNA 1: BRAND */}
           <div className="space-y-6">
-            <h3 className="font-black text-[#642d3a] text-2xl tracking-tighter">CIVICO 2</h3>
+            <h3 className="font-black text-[#455970] text-2xl tracking-tighter uppercase">CIVICO 2</h3>
             <p className="text-xs text-gray-400 uppercase tracking-widest leading-loose">
               L'arte della pizza gourmet <br /> nel cuore di Carpi.
             </p>
             <div className="flex gap-4">
-              {/* Icone social minimali se servono */}
-              <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer">
-                <span className="text-[10px] font-bold text-[#642d3a]">IG</span>
+              <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer group">
+                <span className="text-[10px] font-bold text-[#455970] group-hover:text-[#455970]">IG</span>
               </div>
-              <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer">
-                <span className="text-[10px] font-bold text-[#642d3a]">FB</span>
+              <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer group">
+                <span className="text-[10px] font-bold text-[#455970] group-hover:text-[#455970]">FB</span>
               </div>
             </div>
           </div>
 
           {/* COLONNA 2: NAVIGAZIONE */}
           <div>
-            <h4 className="font-bold text-[#642d3a] mb-6 text-sm uppercase tracking-[0.2em]">Esplora</h4>
+            <h4 className="font-bold text-[#455970] mb-6 text-sm uppercase tracking-[0.2em]">Esplora</h4>
             <ul className="space-y-4 text-sm text-gray-500 font-medium">
-              <li><Link href="/" className="hover:text-[#642d3a] transition-colors">Home</Link></li>
-              <li><Link href="/menu" className="hover:text-[#642d3a] transition-colors">Il Menù</Link></li>
-              <li><Link href="/ingredienti" className="hover:text-[#642d3a] transition-colors">Ingredienti</Link></li>
-              <li><Link href="/contatti" className="hover:text-[#642d3a] transition-colors">Prenota</Link></li>
+              <li><Link href="/" className="hover:text-[#455970] hover:pl-2 transition-all">Home</Link></li>
+              <li><Link href="/menu" className="hover:text-[#455970] hover:pl-2 transition-all">Il Menù</Link></li>
+              <li><Link href="/ingredienti" className="hover:text-[#455970] hover:pl-2 transition-all">Ingredienti</Link></li>
+              <li><Link href="/contatti" className="hover:text-[#455970] hover:pl-2 transition-all">Prenota</Link></li>
             </ul>
           </div>
 
-          {/* COLONNA 3: ORARI (DETTAGLIATI) */}
+          {/* COLONNA 3: ORARI */}
           <div>
-            <h4 className="font-bold text-[#642d3a] mb-6 text-sm uppercase tracking-[0.2em]">Orari d'Apertura</h4>
+            <h4 className="font-bold text-[#455970] mb-6 text-sm uppercase tracking-[0.2em]">Orari d'Apertura</h4>
             <div className="space-y-2 text-[13px] text-gray-500">
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span>Lun</span> <span className="font-bold text-red-800/50">Chiuso</span>
+                <span>Lunedì</span> <span className="font-bold opacity-30">Chiuso</span>
               </div>
               <div className="flex justify-between border-b border-gray-50 pb-1">
                 <span>Mar - Mer</span> <span>12–14, 19–23</span>
               </div>
               <div className="flex justify-between border-b border-gray-50 pb-1">
-                <span>Gio</span> <span>12–14, 19–23</span>
+                <span>Giovedì</span> <span>12–14, 19–23</span>
               </div>
               <div className="flex justify-between border-b border-gray-50 pb-1">
                 <span>Ven - Sab</span> <span>12–14, 19–23:30</span>
               </div>
               <div className="flex justify-between pb-1">
-                <span>Dom</span> <span>19–23</span>
+                <span>Domenica</span> <span>19–23</span>
               </div>
             </div>
           </div>
 
-          {/* COLONNA 4: INFO & CONTATTI */}
+          {/* COLONNA 4: CONTATTI */}
           <div className="space-y-6">
-            <h4 className="font-bold text-[#642d3a] mb-6 text-sm uppercase tracking-[0.2em]">Contatti</h4>
+            <h4 className="font-bold text-[#455970] mb-6 text-sm uppercase tracking-[0.2em]">Contatti</h4>
             <div className="text-sm text-gray-500 space-y-4">
               <p className="leading-relaxed">
-                <span className="block font-bold text-[#642d3a] mb-1">Indirizzo:</span>
+                <span className="block font-bold text-[#455970] mb-1">Indirizzo:</span>
                 Via L. Ariosto, 2, <br /> 41012 Carpi (MO)
               </p>
               <p>
-                <span className="block font-bold text-[#642d3a] mb-1">Prenotazioni:</span>
-                <a href="tel:0598752431" className="text-lg font-bold text-[#642d3a] hover:text-[#ffefcc] transition-colors">
+                <span className="block font-bold text-[#455970] mb-1">Prenotazioni:</span>
+                <a href="tel:0598752431" className="text-xl font-bold text-[#455970] hover:text-[#455970] transition-colors border-b-2 border-[#ffefcc]">
                   059 875 2431
                 </a>
               </p>
