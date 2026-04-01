@@ -15,10 +15,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer group">
-                <span className="text-[10px] font-bold text-[#455970] group-hover:text-[#455970]">IG</span>
+                <span className="text-[10px] font-bold text-[#455970]">IG</span>
               </div>
               <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-[#ffefcc] transition-colors cursor-pointer group">
-                <span className="text-[10px] font-bold text-[#455970] group-hover:text-[#455970]">FB</span>
+                <span className="text-[10px] font-bold text-[#455970]">FB</span>
               </div>
             </div>
           </div>
@@ -72,16 +72,32 @@ export default function Footer() {
               </p>
             </div>
           </div>
-
         </div>
 
-        {/* BOTTOM BAR */}
-        <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] text-gray-400 uppercase tracking-widest">
-            © 2026 Civico 2 - Tutti i diritti riservati
-          </p>
-          <div className="text-[9px] text-gray-300 uppercase tracking-tighter">
-            P.IVA 0123456789 | Made with Passion
+        {/* BOTTOM BAR: INFO FISCALI & CREDIT */}
+        <div className="pt-8 border-t border-gray-100">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+            <div className="space-y-2">
+              <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
+                © 2026 Civico 2 - Tutti i diritti riservati
+              </p>
+              <p className="text-[9px] text-gray-400 leading-relaxed uppercase tracking-tighter">
+                Civico Due Carpi (MO) Via L. A. Muratori, 47, CAP 41012 <br className="hidden md:block" />
+                P. IVA 03831040369 - REA MO - 421443
+              </p>
+            </div>
+            
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] text-gray-300 uppercase tracking-[0.2em]">Powered by</span>
+              <a 
+                href="https://magodigital.it" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[10px] font-black text-[#455970] hover:text-[#ffefcc] transition-colors tracking-widest"
+              >
+                MAGO DIGITAL
+              </a>
+            </div>
           </div>
         </div>
       </div>
