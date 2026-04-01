@@ -6,33 +6,53 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       
-      {/* 1. HERO SECTION "CHE SPACCA" */}
+      {/* 1. HERO SECTION CON VIDEO "CHE SPACCA" */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <Image
-          src="/hero1.webp" 
-          alt="Civico 2 Gourmet"
-          fill
-          className="object-cover scale-105 animate-slow-zoom"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* VIDEO DI SFONDO */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+        >
+          <source src="/internovideo.mp4" type="video/mp4" />
+          {/* Fallback image se il video non carica */}
+          <img src="/hero1.webp" alt="Civico 2 Gourmet" className="object-cover w-full h-full" />
+        </video>
+
+        {/* OVERLAY SCURO PER LEGGIBILITÀ TESTO */}
+        <div className="absolute inset-0 bg-black/50" />
+
         <div className="relative z-10 text-center px-4">
-          <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-sm mb-4 block font-bold">Pizzeria Gourmet Carpi</span>
+          <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-sm mb-4 block font-bold">
+            Pizzeria Gourmet Carpi
+          </span>
           <h1 className="text-6xl md:text-9xl font-bold text-white tracking-tighter mb-8">
             CIVICO <span className="text-[#ffefcc]">2</span>
           </h1>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="/menu" className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all">
+          
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a 
+              href="/menu" 
+              className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center"
+            >
               SCOPRI IL MENU
             </a>
-            <a href="tel:0598752431" className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all">
+            <a 
+              href="tel:0598752431" 
+              className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center"
+            >
               PRENOTA ORA
             </a>
           </div>
         </div>
+
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7-7-7" /></svg>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50 hidden md:block">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7-7-7" />
+          </svg>
         </div>
       </section>
 
