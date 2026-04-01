@@ -52,7 +52,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-bold text-[#455970]">
           <a href="/informazioni" className="hover:opacity-60 transition">Informazioni</a>
           <a href="/menu" className="hover:opacity-60 transition">Menu</a>
-          <a href="/galleria" className="hover:opacity-60 transition">Galleria</a>
+          <a href="/contatti" className="hover:opacity-60 transition">Contatti</a>
         </nav>
 
         {/* BOTTONE CHIAMATA DESKTOP (Destra) */}
