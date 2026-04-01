@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCucinaOpen, setIsCucinaOpen] = useState(false); // Stato per il dropdown desktop
+  const [isCucinaOpen, setIsCucinaOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -14,7 +14,7 @@ export default function Header() {
     const controlHeader = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setIsVisible(false);
-        setIsCucinaOpen(false); // Chiude il dropdown se si scende
+        setIsCucinaOpen(false);
       } else {
         setIsVisible(true);
       }
@@ -46,6 +46,9 @@ export default function Header() {
 
         {/* NAVBAR DESKTOP */}
         <nav className="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-bold text-[#455970]">
+          {/* HOME PAGE LINK */}
+          <a href="/" className="hover:opacity-60 transition h-20 flex items-center border-b-2 border-transparent hover:border-[#455970]">Civico2</a>
+          
           <a href="/informazioni" className="hover:opacity-60 transition h-20 flex items-center">Informazioni</a>
           
           {/* SOTTOMENU CUCINA DESKTOP */}
@@ -61,7 +64,6 @@ export default function Header() {
               </svg>
             </span>
 
-            {/* Dropdown Menu */}
             <div className={`absolute top-20 left-0 w-48 bg-white border border-gray-100 shadow-xl rounded-b-2xl py-4 transition-all duration-200 ${isCucinaOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
               <a href="/menu" className="px-6 py-3 block hover:bg-[#455970]/5 hover:text-[#455970] transition">Il Menù</a>
               <a href="/ingredienti" className="px-6 py-3 block hover:bg-[#455970]/5 hover:text-[#455970] transition">Ingredienti</a>
@@ -107,11 +109,12 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Voci Menu Mobile */}
           <nav className="flex flex-col items-center justify-center flex-grow py-12 space-y-8">
+            {/* HOME PAGE LINK MOBILE */}
+            <a href="/" onClick={toggleMenu} className="text-xl font-bold text-[#455970] uppercase tracking-widest border-b-2 border-[#455970]">Civico2</a>
+            
             <a href="/informazioni" onClick={toggleMenu} className="text-xl font-bold text-[#455970] uppercase tracking-widest">Informazioni</a>
             
-            {/* Sottosezione Cucina Mobile */}
             <div className="w-full bg-gray-50 py-8 flex flex-col items-center space-y-6">
                <span className="text-xs font-black text-gray-400 tracking-[0.3em] uppercase">Cucina</span>
                <a href="/menu" onClick={toggleMenu} className="text-3xl font-bold text-[#455970] uppercase">Il Menù</a>
