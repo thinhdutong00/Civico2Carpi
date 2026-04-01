@@ -91,7 +91,7 @@ export default function Home() {
       <section className="bg-[#455970] py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
            <div className="relative h-[700px] rounded-full overflow-hidden border-[15px] border-white/10 shadow-2xl">
-              <Image src="/esterno02.jpg" alt="Atmosfera" fill className="object-cover" />
+              <Image src="/interno01.jpg" alt="Atmosfera" fill className="object-cover" />
            </div>
            <div className="text-white space-y-8">
               <h3 className="text-5xl md:text-8xl font-bold tracking-tighter">A pochi passi <br/> dal centro storico</h3>
