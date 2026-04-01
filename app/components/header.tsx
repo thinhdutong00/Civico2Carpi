@@ -13,19 +13,19 @@ export default function Header() {
 
   useEffect(() => {
     const controlHeader = () => {
-      // Gestione Trasparenza vs Sfondo Bianco
-      if (window.scrollY > 50) {
+      // Monitoriamo lo scroll per rimpicciolire il logo, ma lo sfondo resta bianco
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
 
-      // Gestione Scomparsa allo scroll
+      // Gestione Scomparsa intelligente allo scroll
       if (window.scrollY > lastScrollY && window.scrollY > 150) {
-        setIsVisible(false); // Nascondi quando scendi
+        setIsVisible(false); 
         setIsCucinaOpen(false);
       } else {
-        setIsVisible(true); // Mostra quando sali
+        setIsVisible(true); 
       }
       setLastScrollY(window.scrollY);
     };
@@ -36,17 +36,15 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out bg-white border-b border-gray-100 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
-        isScrolled 
-          ? 'bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-100 py-2' 
-          : 'bg-transparent py-4'
+        isScrolled ? 'py-2 shadow-md bg-white/95 backdrop-blur-md' : 'py-4 bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center transition-all duration-500">
         
-        {/* LOGO DINAMICO */}
+        {/* LOGO - Si rimpicciolisce leggermente allo scroll per dinamicità */}
         <a href="/" className={`relative transition-all duration-500 ${isScrolled ? 'w-48 h-14' : 'w-64 h-20'} flex items-center`}>
           <Image 
             src="/logo.png" 
@@ -57,18 +55,16 @@ export default function Header() {
           />
         </a>
 
-        {/* NAVBAR DESKTOP - Premium Styling */}
-        <nav className={`hidden md:flex items-center space-x-10 text-[13px] uppercase tracking-[0.2em] font-bold transition-colors duration-500 ${
-          isScrolled ? 'text-[#455970]' : 'text-white'
-        }`}>
+        {/* NAVBAR DESKTOP - Sempre in blu #455970 per leggibilità */}
+        <nav className="hidden md:flex items-center space-x-10 text-[13px] uppercase tracking-[0.2em] font-bold text-[#455970]">
           <a href="/" className="group relative py-2">
             Civico2
-            <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-[#455970]' : 'bg-[#ffefcc]'}`}></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
           </a>
           
           <a href="/informazioni" className="group relative py-2">
             Informazioni
-            <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-[#455970]' : 'bg-[#ffefcc]'}`}></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
           </a>
           
           {/* DROPDOWN CUCINA */}
@@ -95,7 +91,7 @@ export default function Header() {
 
           <a href="/contatti" className="group relative py-2">
             Contatti
-            <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-[#455970]' : 'bg-[#ffefcc]'}`}></span>
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#455970] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
@@ -103,30 +99,26 @@ export default function Header() {
         <div className="hidden md:block">
           <a 
             href="tel:0598752431" 
-            className={`px-8 py-3 rounded-full text-xs font-black tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg ${
-              isScrolled 
-                ? 'bg-[#455970] text-white shadow-[#455970]/20' 
-                : 'bg-white text-[#455970] shadow-white/10'
-            }`}
+            className="bg-[#455970] text-white px-8 py-3 rounded-full text-xs font-black tracking-widest transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-[#455970]/20"
           >
             PRENOTA ORA
           </a>
         </div>
 
-        {/* HAMBURGER - Dinamico */}
+        {/* HAMBURGER - Sempre visibile in blu */}
         <button 
           onClick={toggleMenu}
-          className={`md:hidden p-2 transition-colors ${isScrolled ? 'text-[#455970]' : 'text-white'}`}
+          className="md:hidden p-2 text-[#455970] focus:outline-none"
         >
           <div className="w-8 h-5 flex flex-col justify-between">
-            <span className={`h-0.5 w-full bg-current transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`h-0.5 w-full bg-current ${isOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`h-0.5 w-full bg-current transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`h-0.5 w-full bg-current duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`h-0.5 w-full bg-current transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </div>
         </button>
       </div>
 
-      {/* OVERLAY MOBILE - Minimal & Chic */}
+      {/* OVERLAY MOBILE - Elegante in #455970 */}
       <div className={`fixed inset-0 bg-[#455970] z-[200] transition-all duration-700 ease-in-out ${
         isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       } md:hidden`}>
@@ -148,6 +140,13 @@ export default function Header() {
             </div>
 
             <a href="/contatti" onClick={toggleMenu} className="text-4xl font-bold text-white tracking-tighter">Contatti</a>
+            
+            <a 
+              href="tel:0598752431" 
+              className="mt-4 bg-white text-[#455970] px-10 py-4 rounded-full text-lg font-bold shadow-xl text-center"
+            >
+              PRENOTA ORA
+            </a>
           </nav>
         </div>
       </div>
