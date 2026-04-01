@@ -37,13 +37,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         
-        {/* LOGO (Sinistra) */}
-        <a href="/" className="relative w-32 h-12">
+        {/* LOGO INGRANDITO (Sinistra) */}
+        <a href="/" className="relative w-48 h-16 flex items-center">
           <Image 
             src="/logo.png" 
             alt="Civico 2 Logo" 
             fill 
             className="object-contain object-left"
+            priority // Aggiunto priority per caricarlo subito, essendo nel header
           />
         </a>
 
