@@ -152,8 +152,7 @@ export default function Home() {
           role: "Local Guide"
         },
         {
-          text: "Posto accogliente anche se non molto grande, pizza molto buona con ingredienti di qualità.
-Buon servizio e prezzi nella media.",
+          text: "Impasto leggerissimo e ingredienti di una qualità introvabile altrove. La margherita gourmet è un capolavoro.",
           author: "Tommaso Pareggi",
           role: "Food Blogger"
         },
