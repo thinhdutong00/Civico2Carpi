@@ -2,6 +2,14 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-[#455970]">
@@ -122,22 +130,94 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. RECENSIONI - THE SOCIAL PROOF (ULTRA CLEAN) */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* 5. RECENSIONI - PREMIUM SLIDER */}
+<section className="py-32 bg-gray-50 overflow-hidden">
+  <div className="max-w-5xl mx-auto px-6">
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay]}
+      spaceBetween={50}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      pagination={{ clickable: true }}
+      className="reviews-swiper !pb-16"
+    >
+      {[
+        {
+          text: "Civico 2 ha cambiato il concetto di pizza a Carpi. Un'esperienza che coinvolge tutti i sensi.",
+          author: "Marco Rossi",
+          role: "Local Guide"
+        },
+        {
+          text: "Impasto leggerissimo e ingredienti di una qualità introvabile altrove. La margherita gourmet è un capolavoro.",
+          author: "Elena Bianchi",
+          role: "Food Blogger"
+        },
+        {
+          text: "Atmosfera incredibile, servizio veloce e attento. È diventato il mio posto preferito per il sabato sera.",
+          author: "Luca Verri",
+          role: "Cliente affezionato"
+        },
+        {
+          text: "Non è solo una pizza, è ricerca. Si sente la passione in ogni morso. Carta dei vini eccellente.",
+          author: "Giulia Ferrari",
+          role: "Sommelier"
+        },
+        {
+          text: "Finalmente una vera pizza napoletana a Carpi, ma con un tocco moderno che stupisce. Bravi!",
+          author: "Riccardo Gatti",
+          role: "Critico Gastronomico"
+        }
+      ].map((review, i) => (
+        <SwiperSlide key={i}>
           <div className="flex flex-col items-center text-center space-y-8">
+            {/* Stelle */}
             <div className="text-[#ffefcc] flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              {[...Array(5)].map((_, star) => (
+                <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
               ))}
             </div>
-            <blockquote className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight italic">
-              "Civico 2 ha cambiato il concetto di pizza a Carpi. <br className="hidden md:block"/> Un'esperienza che coinvolge tutti i sensi."
+
+            {/* Testo Recensione */}
+            <blockquote className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight italic text-[#455970] max-w-4xl">
+              "{review.text}"
             </blockquote>
-            <p className="text-gray-400 font-black uppercase tracking-[0.4em] text-[10px]">Marco Rossi — Local Guide</p>
+
+            {/* Firma */}
+            <div className="pt-4">
+              <p className="text-[#455970] font-black uppercase tracking-[0.4em] text-xs">
+                {review.author}
+              </p>
+              <p className="text-gray-400 text-[10px] uppercase tracking-[0.2em] mt-1">
+                {review.role}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+
+  {/* Style personalizzato per i pallini della paginazione */}
+  <style jsx global>{`
+    .reviews-swiper .swiper-pagination-bullet {
+      background: #455970;
+      opacity: 0.2;
+    }
+    .reviews-swiper .swiper-pagination-bullet-active {
+      background: #ffefcc !important;
+      opacity: 1;
+      width: 20px;
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+  `}</style>
+</section>
 
       {/* 6. FINAL CTA - BENTO STYLE */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
