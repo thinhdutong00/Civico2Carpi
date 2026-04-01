@@ -88,29 +88,50 @@ export default function Home() {
       </section>
 
       {/* 3. EXPERIENCE - FULL WIDTH FOCUS */}
-      <section className="bg-[#455970] py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-           <div className="relative h-[700px] rounded-full overflow-hidden border-[15px] border-white/10 shadow-2xl">
-              <Image src="/interno01.jpg" alt="Atmosfera" fill className="object-cover" />
-           </div>
-           <div className="text-white space-y-8">
-              <h3 className="text-5xl md:text-7xl font-bold tracking-tighter">A pochi passi <br/> dal centro storico</h3>
-              <p className="text-white/70 text-xl leading-relaxed">
-                Un ambiente dal design moderno, accogliente e facilmente raggiungibile, situato nei pressi del centro storico di Carpi. Il locale ha una sala interna dotata di 60 coperti; nella stagione estiva invece, viene ampliato lo spazio a disposizione grazie ai nostri dehor.
-              </p>
-              <div className="grid grid-cols-2 gap-8 pt-8">
-                <div>
-                  <p className="text-[#ffefcc] text-3xl font-bold">60</p>
-                  <p className="text-xs uppercase tracking-widest opacity-60">Coperti</p>
-                </div>
-                <div>
-                  <p className="text-[#ffefcc] text-3xl font-bold">Gourmet</p>
-                  <p className="text-xs uppercase tracking-widest opacity-60">Selezione Ingredienti</p>
-                </div>
-              </div>
-           </div>
+<section className="bg-[#455970] py-20 md:py-32 overflow-hidden px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+    
+    {/* Immagine: Da ovale su desktop a rettangolo morbido su mobile */}
+    <div className="relative h-[450px] md:h-[700px] w-full rounded-[60px] md:rounded-full overflow-hidden border-[10px] md:border-[15px] border-white/10 shadow-2xl order-2 lg:order-1">
+      <Image 
+        src="/interno01.jpg" 
+        alt="Atmosfera Civico 2" 
+        fill 
+        className="object-cover transition-transform duration-700 hover:scale-105" 
+      />
+    </div>
+
+    {/* Contenuto Testuale */}
+    <div className="text-white space-y-6 md:space-y-8 order-1 lg:order-2">
+      <div className="space-y-4">
+        <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-[10px] font-black opacity-80">
+          La Location
+        </span>
+        <h3 className="text-4xl md:text-7xl font-black tracking-tighter leading-[0.9] uppercase italic">
+          A pochi passi <br className="hidden md:block"/> dal <span className="text-[#ffefcc]">centro.</span>
+        </h3>
+      </div>
+      
+      <p className="text-white/70 text-lg md:text-xl leading-relaxed font-medium max-w-xl">
+        Un ambiente dal design moderno e accogliente, situato nei pressi del centro storico di Carpi. 
+        Disponiamo di una sala interna da <span className="text-white">60 coperti</span> e di un ampio dehor estivo per le tue serate all'aperto.
+      </p>
+
+      {/* Grid Statistiche */}
+      <div className="grid grid-cols-2 gap-6 md:gap-8 pt-6 md:pt-10 border-t border-white/10">
+        <div className="space-y-1">
+          <p className="text-[#ffefcc] text-4xl md:text-5xl font-black tracking-tighter">60</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-50">Coperti Interni</p>
         </div>
-      </section>
+        <div className="space-y-1">
+          <p className="text-[#ffefcc] text-4xl md:text-5xl font-black tracking-tighter uppercase italic">Gourmet</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-50">Selezione Materie Prime</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* 4. SEZIONE INGREDIENTI - FLOATING CARDS */}
       <section className="py-32 bg-white text-center">
