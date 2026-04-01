@@ -56,31 +56,34 @@ export default function Informazioni() {
           </p>
         </section>
 
-        {/* SEZIONE 4: Foto larga ma non alta (Panoramic) */}
-        <section className="relative w-full h-[300px] mb-20 overflow-hidden rounded-3xl">
+        {/* SEZIONE 4: Foto panoramica con altezza aumentata */}
+        <section className="relative w-full h-[550px] mb-20 overflow-hidden rounded-[40px] shadow-lg">
           <Image 
             src="/pizza-salsiccia.jpg" 
-            alt="Ambiente Civico 2" 
+            alt="Dettaglio Pizza Gourmet Civico 2" 
             fill 
-            className="object-cover"
+            className="object-cover transition-transform duration-700 hover:scale-105"
           />
+          {/* Overlay leggero opzionale per dare profondità */}
+          <div className="absolute inset-0 bg-black/5" />
         </section>
 
-        {/* SEZIONE 5: Riquadro centrale testo + bottoni CTA */}
+        {/* SEZIONE 5: Riquadro centrale allargato + bottoni CTA */}
         <section className="flex justify-center">
-          <div className="bg-[#455970]/5 border border-[#455970]/10 p-10 md:p-16 rounded-[40px] text-center max-w-4xl w-full">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#455970] mb-4">
+          <div className="bg-[#455970]/5 border border-[#455970]/10 p-12 md:p-24 rounded-[50px] text-center max-w-7xl w-full shadow-sm">
+            <h3 className="text-3xl md:text-5xl font-bold text-[#455970] mb-6">
               Pronto a provare la nostra cucina?
             </h3>
-            <p className="text-gray-600 mb-8 text-lg">
-              Siamo aperti tutti i giorni per pranzo e cena. Consulta il nostro menù online o prenota un tavolo.
+            <p className="text-gray-600 mb-10 text-lg md:text-xl max-w-2xl mx-auto">
+              Siamo aperti tutti i giorni per pranzo e cena. 
+              Consulta il nostro menù online o prenota un tavolo direttamente per telefono.
             </p>
             
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               {/* Link alla Pagina Menu */}
               <a 
                 href="/menu" 
-                className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-[#455970]/20 w-full md:w-auto inline-block"
+                className="bg-[#455970] text-white px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-[#455970]/20 w-full md:w-auto inline-block text-center"
               >
                 Scopri il Menù
               </a>
@@ -88,7 +91,7 @@ export default function Informazioni() {
               {/* Link alla Chiamata per Prenotazione */}
               <a 
                 href="tel:0598752431" 
-                className="bg-white text-[#455970] border-2 border-[#455970] px-10 py-4 rounded-full font-bold hover:bg-[#455970] hover:text-white transition-all w-full md:w-auto inline-block"
+                className="bg-white text-[#455970] border-2 border-[#455970] px-12 py-5 rounded-full font-bold text-lg hover:bg-[#455970] hover:text-white transition-all w-full md:w-auto inline-block text-center"
               >
                 Prenota un tavolo
               </a>
