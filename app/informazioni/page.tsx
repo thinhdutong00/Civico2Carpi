@@ -61,18 +61,33 @@ export default function Informazioni() {
           />
         </section>
 
-        {/* SEZIONE 5: Riquadro centrale testo + bottone CTA */}
+        {/* SEZIONE 5: Riquadro centrale testo + bottoni CTA */}
         <section className="flex justify-center">
           <div className="bg-[#455970]/5 border border-[#455970]/10 p-10 md:p-16 rounded-[40px] text-center max-w-4xl w-full">
             <h3 className="text-2xl md:text-3xl font-bold text-[#455970] mb-4">
               Pronto a provare la nostra cucina?
             </h3>
             <p className="text-gray-600 mb-8 text-lg">
-              Siamo aperti tutti i giorni per pranzo e cena. Consulta il nostro menù online.
+              Siamo aperti tutti i giorni per pranzo e cena. Consulta il nostro menù online o prenota un tavolo.
             </p>
-            <button className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-[#455970]/20">
-              Scopri il Menù
-            </button>
+            
+            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+              {/* Link alla Pagina Menu */}
+              <a 
+                href="/menu" 
+                className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-[#455970]/20 w-full md:w-auto inline-block"
+              >
+                Scopri il Menù
+              </a>
+              
+              {/* Link alla Chiamata per Prenotazione */}
+              <a 
+                href="tel:0598752431" 
+                className="bg-white text-[#455970] border-2 border-[#455970] px-10 py-4 rounded-full font-bold hover:bg-[#455970] hover:text-white transition-all w-full md:w-auto inline-block"
+              >
+                Prenota un tavolo
+              </a>
+            </div>
           </div>
         </section>
 
