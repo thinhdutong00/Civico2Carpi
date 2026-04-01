@@ -21,7 +21,7 @@ export default function RootLayout({
           {/* pt-20 serve per non coprire il contenuto con l'header fisso */}
           {children}
         </main>
-        <Footer />
+        <footer />
         
         {/* Il Cookie Banner viene caricato qui per essere globale */}
         <CookieBanner />
