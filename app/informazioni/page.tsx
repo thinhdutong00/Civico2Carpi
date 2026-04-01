@@ -23,7 +23,7 @@ export default function Informazioni() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
           <div className="relative h-[400px] overflow-hidden rounded-2xl">
             <Image 
-              src="/foto-interni-1.webp" 
+              src="/interno01.jpg" 
               alt="Interni Civico 2" 
               fill 
               className="object-cover"
@@ -31,7 +31,7 @@ export default function Informazioni() {
           </div>
           <div className="relative h-[400px] overflow-hidden rounded-2xl">
             <Image 
-              src="/foto-pizza-1.webp" 
+              src="/pomodoro-napoli.jpg" 
               alt="Pizzeria Gourmet Carpi" 
               fill 
               className="object-cover"
