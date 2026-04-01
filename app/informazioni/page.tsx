@@ -49,12 +49,10 @@ export default function Informazioni() {
         {/* SEZIONE 3: Di nuovo Titolo e Testo */}
         <section className="mb-16 text-left">
           <h2 className="text-3xl font-bold text-[#455970] mb-4">
-            La nostra Filosofia
+            Gusta le migliori pizze gourmet napoletane?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl">
-            Utilizziamo solo farine selezionate e ingredienti a KM 0 per garantirti una pizza 
-            che non è solo un pasto, ma un viaggio nei sapori del nostro territorio. 
-            Ogni dettaglio, dall'impasto alla scelta dei topping, è curato con passione.
+            Da noi hai la possibilità di provare le specialità tipiche della regione campana, dagli antipasti alla pizza napoletana per concludere con i nostri dolci preparati in casa.
           </p>
         </section>
 
