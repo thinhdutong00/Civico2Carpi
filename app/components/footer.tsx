@@ -87,16 +87,27 @@ export default function Footer() {
               </p>
             </div>
             
-            <div className="flex items-center gap-2">
-              <span className="text-[9px] text-gray-300 uppercase tracking-[0.2em]">Powered by</span>
-              <a 
-                href="https://magodigital.it" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[10px] font-black text-[#455970] hover:text-[#ffefcc] transition-colors tracking-widest"
-              >
-                MAGO DIGITAL
-              </a>
+            <div className="flex flex-col items-end gap-2">
+              <div className="flex items-center gap-2">
+                <span className="text-[9px] text-gray-300 uppercase tracking-[0.2em]">Powered by</span>
+                <a 
+                  href="https://magodigital.it" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[10px] font-black text-[#455970] hover:text-[#ffefcc] transition-colors tracking-widest"
+                >
+                  MAGO DIGITAL
+                </a>
+              </div>
+              {/* LINK LEGALI SOTTO MAGO DIGITAL */}
+              <div className="flex gap-4">
+                <Link href="/privacy-policy" className="text-[9px] text-gray-400 hover:text-[#455970] uppercase tracking-tighter">
+                  Privacy Policy
+                </Link>
+                <Link href="/cookie-policy" className="text-[9px] text-gray-400 hover:text-[#455970] uppercase tracking-tighter">
+                  Cookie Policy
+                </Link>
+              </div>
             </div>
           </div>
         </div>
