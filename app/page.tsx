@@ -94,14 +94,14 @@ export default function Home() {
               <Image src="/esterno02.jpg" alt="Atmosfera" fill className="object-cover" />
            </div>
            <div className="text-white space-y-8">
-              <h3 className="text-5xl md:text-8xl font-bold tracking-tighter">Design <br/> & Comfort.</h3>
+              <h3 className="text-5xl md:text-8xl font-bold tracking-tighter">A pochi passi <br/> dal centro storico</h3>
               <p className="text-white/70 text-xl leading-relaxed">
-                Situato nel cuore di Carpi, Civico 2 accoglie i suoi ospiti in un ambiente dove il design industriale incontra l'eleganza classica.
+                Un ambiente dal design moderno, accogliente e facilmente raggiungibile, situato nei pressi del centro storico di Carpi. Il locale ha una sala interna dotata di 60 coperti; nella stagione estiva invece, viene ampliato lo spazio a disposizione grazie ai nostri dehor.
               </p>
               <div className="grid grid-cols-2 gap-8 pt-8">
                 <div>
-                  <p className="text-[#ffefcc] text-3xl font-bold">50+</p>
-                  <p className="text-xs uppercase tracking-widest opacity-60">Posti a sedere</p>
+                  <p className="text-[#ffefcc] text-3xl font-bold">60</p>
+                  <p className="text-xs uppercase tracking-widest opacity-60">Coperti</p>
                 </div>
                 <div>
                   <p className="text-[#ffefcc] text-3xl font-bold">Gourmet</p>
