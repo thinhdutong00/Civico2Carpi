@@ -220,23 +220,52 @@ export default function Home() {
 </section>
 
       {/* 6. FINAL CTA - BENTO STYLE */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="bg-[#455970] rounded-[100px] p-12 md:p-32 text-center relative overflow-hidden group">
-          {/* Cerchio decorativo */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl" />
-          
-          <div className="relative z-10 space-y-10">
-            <h2 className="text-5xl md:text-[6rem] font-bold text-white tracking-tighter leading-none">
-              Vieni a <br/> trovarci.
-            </h2>
-            <div className="flex flex-col md:flex-row justify-center gap-6">
-              <a href="/menu" className="bg-[#ffefcc] text-[#455970] px-16 py-6 rounded-full font-black uppercase text-sm tracking-widest shadow-2xl hover:scale-105 transition-transform inline-block">
-                Sfoglia il Menù
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="py-24 px-6 max-w-7xl mx-auto">
+  <div className="bg-[#455970] rounded-[60px] md:rounded-[100px] p-16 md:p-32 text-center relative overflow-hidden group">
+    
+    {/* Elementi decorativi Premium */}
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ffefcc]/5 rounded-full -mr-48 -mt-48 blur-[100px] transition-opacity group-hover:opacity-100 opacity-50" />
+    <div className="absolute bottom-0 left-0 w-64 h-64 border border-white/5 rounded-full -ml-20 -mb-20" />
+    
+    <div className="relative z-10 max-w-3xl mx-auto space-y-12">
+      {/* Label sottile sopra il titolo */}
+      <span className="text-[#ffefcc] uppercase tracking-[0.4em] text-[10px] font-bold opacity-80 block mb-4">
+        Un'esperienza autentica
+      </span>
+      
+      <h2 className="text-6xl md:text-[7.5rem] font-black text-white tracking-tighter leading-[0.85] uppercase italic drop-shadow-sm">
+        Oltre la <br/>
+        <span className="text-[#ffefcc]">Tradizione.</span>
+      </h2>
+      
+      <p className="text-white/60 text-sm md:text-base font-medium max-w-md mx-auto leading-relaxed tracking-wide">
+        Ti aspettiamo a Carpi per farti scoprire <br className="hidden md:block"/> 
+        il vero gusto della pizza contemporanea.
+      </p>
+
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 pt-6">
+        <a 
+          href="/menu" 
+          className="bg-[#ffefcc] text-[#455970] px-12 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 inline-block active:scale-95"
+        >
+          Sfoglia il Menù
+        </a>
+        
+        <a 
+          href="tel:0598752431" 
+          className="text-white border-b-2 border-white/20 pb-1 font-bold uppercase text-[10px] tracking-[0.3em] hover:border-[#ffefcc] hover:text-[#ffefcc] transition-all"
+        >
+          Prenota un tavolo
+        </a>
+      </div>
+    </div>
+
+    {/* Numero civico decorativo sullo sfondo */}
+    <span className="absolute -bottom-10 right-10 text-white/5 font-black text-[15rem] select-none pointer-events-none">
+      02
+    </span>
+  </div>
+</section>
 
     </div>
   );
