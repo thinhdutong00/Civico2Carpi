@@ -13,9 +13,7 @@ export default function Informazioni() {
             Civico 2 - Pizzeria Gourmet
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
-            Ciao, benvenuti al Civico 2 di Carpi. Situato proprio nel cuore del centro di Carpi, 
-            il nostro locale nasce per offrirti un'esperienza gourmet unica. Vieni a trovarci 
-            per scoprire il vero gusto della tradizione rivisitata.
+            Situato nei pressi del centro storico di Carpi, offriamo una vasta gamma di opzioni per soddisfare i tuoi gusti culinari. Il nostro ambiente accogliente e moderno è perfetto per famiglie, amici e compleanni; il nostro personale giovane e dinamico è sempre pronto a offrirti un'esperienza di qualità.
           </p>
         </section>
 
