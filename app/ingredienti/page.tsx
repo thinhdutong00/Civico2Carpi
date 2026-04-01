@@ -35,7 +35,7 @@ export default function IngredientiPage() {
           </div>
           <div className="relative h-[400px] rounded-[30px] overflow-hidden shadow-xl">
             <Image 
-              src="/01.png" // Utilizzo una delle immagini caricate per coerenza
+              src="/impasto.jpg" // Utilizzo una delle immagini caricate per coerenza
               alt="Mani in pasta" 
               fill 
               className="object-cover opacity-90"
@@ -47,7 +47,7 @@ export default function IngredientiPage() {
         <section className="py-16 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative h-[400px] rounded-[30px] overflow-hidden shadow-xl order-2 md:order-1">
             <Image 
-              src="/02.png" 
+              src="/pizzapesto.jpg" 
               alt="Ingredienti Gourmet" 
               fill 
               className="object-cover opacity-90"
