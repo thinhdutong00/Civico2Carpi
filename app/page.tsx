@@ -94,7 +94,7 @@ export default function Home() {
               <Image src="/interno01.jpg" alt="Atmosfera" fill className="object-cover" />
            </div>
            <div className="text-white space-y-8">
-              <h3 className="text-5xl md:text-8xl font-bold tracking-tighter">A pochi passi <br/> dal centro storico</h3>
+              <h3 className="text-5xl md:text-7xl font-bold tracking-tighter">A pochi passi <br/> dal centro storico</h3>
               <p className="text-white/70 text-xl leading-relaxed">
                 Un ambiente dal design moderno, accogliente e facilmente raggiungibile, situato nei pressi del centro storico di Carpi. Il locale ha una sala interna dotata di 60 coperti; nella stagione estiva invece, viene ampliato lo spazio a disposizione grazie ai nostri dehor.
               </p>
