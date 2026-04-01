@@ -124,7 +124,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
             <a href="/ingredienti" className="bg-white text-[#455970] px-16 py-6 rounded-full font-black uppercase text-sm tracking-[0.2em] shadow-2xl hover:bg-[#ffefcc] transition-colors">
-              I Nostri Fornitori
+              I Nostri Ingredienti
             </a>
           </div>
         </div>
