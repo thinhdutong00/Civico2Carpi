@@ -63,7 +63,7 @@ export default function Informazioni() {
         {/* SEZIONE 4: Foto larga ma non alta (Panoramic) */}
         <section className="relative w-full h-[300px] mb-20 overflow-hidden rounded-3xl">
           <Image 
-            src="/foto-panoramica.webp" 
+            src="/pizza-salsiccia.jpg" 
             alt="Ambiente Civico 2" 
             fill 
             className="object-cover"
