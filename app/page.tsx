@@ -21,27 +21,30 @@ export default function Home() {
           <img src="/hero1.webp" alt="Civico 2 Gourmet" className="object-cover w-full h-full" />
         </video>
 
-        {/* OVERLAY SCURO PER LEGGIBILITÀ TESTO */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* OVERLAY ALLEGGERITO - Dal 50% al 20% per non scurire troppo il video */}
+        <div className="absolute inset-0 bg-black/20" />
+
+        {/* SFUMATURA AGGIUNTIVA PER FAR RISALTARE IL TESTO SENZA SCURIRE IL VIDEO */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
 
         <div className="relative z-10 text-center px-4">
-          <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-sm mb-4 block font-bold">
+          <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-sm mb-4 block font-bold drop-shadow-md">
             Pizzeria Gourmet Carpi
           </span>
-          <h1 className="text-6xl md:text-9xl font-bold text-white tracking-tighter mb-8">
+          <h1 className="text-6xl md:text-9xl font-bold text-white tracking-tighter mb-8 drop-shadow-2xl">
             CIVICO <span className="text-[#ffefcc]">2</span>
           </h1>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <a 
               href="/menu" 
-              className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center"
+              className="bg-[#455970] text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center shadow-lg"
             >
               SCOPRI IL MENU
             </a>
             <a 
               href="tel:0598752431" 
-              className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center"
+              className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#455970] transition-all w-full md:w-auto text-center shadow-lg"
             >
               PRENOTA ORA
             </a>
