@@ -80,7 +80,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full md:w-1/2 relative h-[600px] rounded-[60px] overflow-hidden group shadow-2xl">
-              <Image src="/foto-impasto.jpg" alt="L'impasto" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <Image src="/pizza01sfondo.jpg" alt="L'impasto" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-0" />
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Home() {
       <section className="bg-[#455970] py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
            <div className="relative h-[700px] rounded-full overflow-hidden border-[15px] border-white/10 shadow-2xl">
-              <Image src="/interno-civico.jpg" alt="Atmosfera" fill className="object-cover" />
+              <Image src="/esterno02.jpg" alt="Atmosfera" fill className="object-cover" />
            </div>
            <div className="text-white space-y-8">
               <h3 className="text-5xl md:text-8xl font-bold tracking-tighter">Design <br/> & Comfort.</h3>
