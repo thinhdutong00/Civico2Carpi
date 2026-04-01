@@ -75,7 +75,7 @@ export default function Contatti() {
           <div className="space-y-8 h-full">
             <div className="relative h-[400px] lg:h-[750px] w-full rounded-[40px] overflow-hidden shadow-2xl">
                <Image 
-                src="/esterno01.jpg" // Cambia con una foto del locale o dell'ingresso
+                src="/esterno02.jpg" // Cambia con una foto del locale o dell'ingresso
                 alt="Ingresso Civico 2"
                 fill
                 className="object-cover"
