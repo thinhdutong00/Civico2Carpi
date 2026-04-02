@@ -168,29 +168,29 @@ export default function Home() {
     >
       {[
         {
-          text: "Civico 2 ha cambiato il concetto di pizza a Carpi. Un'esperienza che coinvolge tutti i sensi.",
-          author: "Marco Rossi",
+          text: "Pizzeria vicino al centro di Carpi ci sono da rispettare i “turni” ma il tempo non manca. Merita l’attesa pizza davvero buona, bravi.",
+          author: "iPANZER",
+          role: "Utente verificato"
+        },
+        {
+          text: "Consigliato da un amico di Carpi... L'impasto Ottimo...soddisfatto di aver visto su una pizza materie prime e condimenti di alta qualità....inoltre hanno una birra artigianale italiana molto buona...anzi OTTIMA....ritornerò volentieri...Bravi tutti 👏👏",
+          author: "Giuseppe Vitrani",
           role: "Local Guide"
         },
         {
-          text: "Impasto leggerissimo e ingredienti di una qualità introvabile altrove. La margherita gourmet è un capolavoro.",
-          author: "Tommaso Pareggi",
-          role: "Food Blogger"
+          text: "Sono stata lì ieri sera con la mia famiglia, premetto che la pizza era veramente buonissima, ma più di ogni altra cosa vorrei ringraziare di cuore tutto lo staff, perché sono stata male e loro si sono presi cura di me in una maniera incredibile, sono rimasta veramente colpita dalla gentilezza. Grazie grazie di cuore a tutti.",
+          author: "Simometta Marzola",
+          role: "Utente verficato"
         },
         {
-          text: "Atmosfera incredibile, servizio veloce e attento. È diventato il mio posto preferito per il sabato sera.",
-          author: "Luca Verri",
-          role: "Cliente affezionato"
+          text: "Pizza ottima e digeribilissima. Birre speciali e buonissime. Personale giovane e molto cortese",
+          author: "Erika Malavasi",
+          role: "Utente verficato"
         },
         {
-          text: "Non è solo una pizza, è ricerca. Si sente la passione in ogni morso. Carta dei vini eccellente.",
-          author: "Giulia Ferrari",
-          role: "Sommelier"
-        },
-        {
-          text: "Finalmente una vera pizza napoletana a Carpi, ma con un tocco moderno che stupisce. Bravi!",
-          author: "Riccardo Gatti",
-          role: "Critico Gastronomico"
+          text: "Pizzeria che si trova in centro a Carpi. Pizza alta con cornicione e calzoni particolari. Vasta scelta di birre. Tavoli all'aperto situati davanti, prendendo alcuni parcheggi. Consigliata la prenotazione.",
+          author: "Lisa Lizzy",
+          role: "Utente verficato"
         }
       ].map((review, i) => (
         <SwiperSlide key={i}>
