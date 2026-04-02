@@ -127,6 +127,7 @@ export default function Header() {
             <a href="/" onClick={toggleMenu} className="text-5xl font-black text-white tracking-tighter">Civico 2</a>
             <a href="/informazioni" onClick={toggleMenu} className="text-4xl font-bold text-white/90 tracking-tighter">Storia</a>
             
+            {/* SUBMENU CUCINA - RIPRISTINATO */}
             <div className="space-y-4">
                <p className="text-[#ffefcc] text-[10px] font-black uppercase tracking-[0.3em] opacity-60">Esplora la cucina</p>
                <div className="flex flex-col space-y-5 pl-6 border-l-2 border-white/10">
