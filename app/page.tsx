@@ -240,49 +240,52 @@ export default function Home() {
   `}</style>
 </section>
 
-      {/* 6. FINAL CTA - BENTO STYLE */}
-<section className="py-24 px-6 max-w-7xl mx-auto">
-  <div className="bg-[#455970] rounded-[60px] md:rounded-[100px] p-16 md:p-32 text-center relative overflow-hidden group">
+     {/* 6. FINAL CTA - BENTO STYLE */}
+<section className="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+  <div className="bg-[#455970] rounded-[40px] md:rounded-[100px] p-10 md:p-32 text-center relative overflow-hidden group">
     
     {/* Elementi decorativi Premium */}
-    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#ffefcc]/5 rounded-full -mr-48 -mt-48 blur-[100px] transition-opacity group-hover:opacity-100 opacity-50" />
-    <div className="absolute bottom-0 left-0 w-64 h-64 border border-white/5 rounded-full -ml-20 -mb-20" />
+    <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[#ffefcc]/5 rounded-full -mr-24 md:-mr-48 -mt-24 md:-mt-48 blur-[60px] md:blur-[100px] transition-opacity group-hover:opacity-100 opacity-50" />
+    <div className="absolute bottom-0 left-0 w-40 md:w-64 h-40 md:h-64 border border-white/5 rounded-full -ml-10 md:-ml-20 -mb-10 md:-mb-20" />
     
-    <div className="relative z-10 max-w-3xl mx-auto space-y-12">
+    <div className="relative z-10 max-w-3xl mx-auto space-y-8 md:space-y-12">
       {/* Label sottile sopra il titolo */}
-      <span className="text-[#ffefcc] uppercase tracking-[0.4em] text-[10px] font-bold opacity-80 block mb-4">
-        Un'esperienza autentica
-      </span>
+      <div className="space-y-2">
+        <span className="text-[#ffefcc] uppercase tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] font-black opacity-80 block">
+          Un'esperienza autentica
+        </span>
+        <div className="w-8 h-[1px] bg-[#ffefcc]/30 mx-auto md:hidden"></div>
+      </div>
       
-      <h2 className="text-6xl md:text-[7.5rem] font-black text-white tracking-tighter leading-[0.85] uppercase italic drop-shadow-sm">
+      <h2 className="text-5xl md:text-[7.5rem] font-black text-white tracking-tighter leading-[0.9] md:leading-[0.85] uppercase italic drop-shadow-sm">
         Oltre la <br/>
         <span className="text-[#ffefcc]">Tradizione.</span>
       </h2>
       
-      <p className="text-white/60 text-sm md:text-base font-medium max-w-md mx-auto leading-relaxed tracking-wide">
+      <p className="text-white/60 text-xs md:text-base font-medium max-w-[280px] md:max-w-md mx-auto leading-relaxed tracking-wide">
         Ti aspettiamo a Carpi per farti scoprire <br className="hidden md:block"/> 
         il vero gusto della pizza contemporanea.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 pt-6">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 pt-4 md:pt-6">
         <a 
           href="/menu" 
-          className="bg-[#ffefcc] text-[#455970] px-12 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 inline-block active:scale-95"
+          className="w-full md:w-auto bg-[#ffefcc] text-[#455970] px-10 md:px-12 py-5 rounded-full font-black uppercase text-[10px] md:text-xs tracking-[0.2em] shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 inline-block active:scale-95"
         >
           Sfoglia il Menù
         </a>
         
         <a 
           href="tel:0598752431" 
-          className="text-white border-b-2 border-white/20 pb-1 font-bold uppercase text-[10px] tracking-[0.3em] hover:border-[#ffefcc] hover:text-[#ffefcc] transition-all"
+          className="text-white border-b-2 border-white/20 pb-1 font-black uppercase text-[9px] md:text-[10px] tracking-[0.3em] hover:border-[#ffefcc] hover:text-[#ffefcc] transition-all"
         >
           Prenota un tavolo
         </a>
       </div>
     </div>
 
-    {/* Numero civico decorativo sullo sfondo */}
-    <span className="absolute -bottom-10 right-10 text-white/5 font-black text-[15rem] select-none pointer-events-none">
+    {/* Numero civico decorativo - Ridimensionato per mobile */}
+    <span className="absolute -bottom-6 md:-bottom-10 -right-4 md:right-10 text-white/5 font-black text-[8rem] md:text-[15rem] select-none pointer-events-none leading-none">
       02
     </span>
   </div>
