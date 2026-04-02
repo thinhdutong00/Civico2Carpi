@@ -124,7 +124,7 @@ export default function Home() {
           <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-50">Coperti Interni</p>
         </div>
         <div className="space-y-1">
-          <p className="text-[#ffefcc] text-4xl md:text-5xl font-black tracking-tighter uppercase italic">Gourmet</p>
+          <p className="text-[#ffefcc] text-4xl md:text-4xl font-black tracking-tighter uppercase italic">Gourmet</p>
           <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-50">Selezione Materie Prime</p>
         </div>
       </div>
