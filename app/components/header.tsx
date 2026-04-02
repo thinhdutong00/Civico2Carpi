@@ -39,7 +39,7 @@ export default function Header() {
     window.addEventListener('scroll', controlHeader);
     return () => {
       window.removeEventListener('scroll', controlHeader);
-      document.body.style.overflow = 'unset'; // Reset in caso di smontaggio
+      document.body.style.overflow = 'unset';
     };
   }, [lastScrollY, isOpen]);
 
@@ -102,11 +102,22 @@ export default function Header() {
         </div>
       </header>
 
-      {/* OVERLAY MOBILE - SPOSTATO FUORI DALL'HEADER PER EVITARE EREDITARIETÀ CSS */}
+      {/* OVERLAY MOBILE */}
       <div className={`fixed inset-0 z-[150] transition-all duration-500 ease-in-out md:hidden ${
         isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
       }`} style={{ backgroundColor: '#455970' }}>
         
+        {/* TASTO CHIUDI (X) - Posizionato in alto a destra */}
+        <button 
+          onClick={toggleMenu}
+          className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-2 z-[220]"
+          aria-label="Chiudi menu"
+        >
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         {/* Cerchi decorativi */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#ffefcc]/5 rounded-full -ml-32 -mb-32 blur-3xl" />
