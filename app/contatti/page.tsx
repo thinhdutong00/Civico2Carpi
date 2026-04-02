@@ -91,18 +91,40 @@ export default function Contatti() {
         </div>
 
         {/* SEZIONE FINALE: CTA SOCIAL */}
-        <div className="mt-20 text-center">
-          <div className="bg-[#455970] py-16 px-6 rounded-[50px] text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#ffefcc]">Seguici su Instagram</h2>
-            <p className="mb-8 opacity-90 max-w-xl mx-auto">Rimani aggiornato sulle nostre nuove pizze fuori menù e sugli eventi speciali.</p>
-            <a 
-              href="#" 
-              className="bg-white text-[#455970] px-12 py-4 rounded-full font-bold hover:scale-105 transition-transform inline-block shadow-xl"
-            >
-              @civico2pizzeria
-            </a>
-          </div>
-        </div>
+<div className="mt-20 text-center">
+  <div className="bg-[#455970] py-16 px-6 rounded-[40px] md:rounded-[60px] text-white shadow-2xl relative overflow-hidden group">
+    
+    {/* Effetto luce soffusa in background */}
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+
+    <div className="relative z-10">
+      <span className="text-[#ffefcc] uppercase tracking-[0.3em] text-[10px] font-black opacity-80 block mb-4">
+        Social Community
+      </span>
+      <h2 className="text-4xl md:text-5xl font-black mb-6 text-white tracking-tighter uppercase italic leading-none">
+        Seguici su <span className="text-[#ffefcc]">Instagram</span>
+      </h2>
+      <p className="mb-10 text-white/70 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+        Rimani aggiornato sulle nostre nuove pizze fuori menù, <br className="hidden md:block"/> 
+        scopri i dietro le quinte e partecipa ai nostri eventi speciali.
+      </p>
+      
+      <a 
+        href="https://www.instagram.com/civico2.carpi/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="bg-[#ffefcc] text-[#455970] px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-white hover:scale-105 transition-all duration-300 inline-block shadow-[0_15px_30px_rgba(0,0,0,0.2)] active:scale-95"
+      >
+        @civico2.carpi
+      </a>
+    </div>
+
+    {/* Numero civico decorativo appena accennato */}
+    <span className="absolute -bottom-6 -right-4 text-white/5 font-black text-9xl select-none">
+      02
+    </span>
+  </div>
+</div>
 
       </div>
     </div>
