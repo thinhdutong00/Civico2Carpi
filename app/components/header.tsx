@@ -137,8 +137,8 @@ export default function Header() {
           </nav>
 
           <div className="absolute bottom-12 left-12 space-y-1">
-            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Via L. A. Muratori, 47</p>
-            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">41012 Carpi (MO)</p>
+            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Via L. Ariosto, 2,</p>
+            <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">41012 Carpi MO</p>
           </div>
         </div>
       </div>
