@@ -137,7 +137,7 @@ export default function Home() {
       <section className="py-32 bg-white text-center">
         <div className="max-w-3xl mx-auto px-6 mb-20">
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Solo il meglio della <span className="italic font-serif">terra.</span></h2>
-          <p className="text-gray-500 text-lg">Selezioniamo Presidi Slow Food e prodotti DOP per trasformare ogni morso in un viaggio.</p>
+          <p className="text-gray-500 text-lg">Selezioniamo solo il meglio della nostra terra per trasformare ogni morso in un'emozione autentica.</p>
         </div>
         
         <div className="relative h-[60vh] mx-6 rounded-[80px] overflow-hidden group">
