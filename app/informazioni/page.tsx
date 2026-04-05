@@ -59,7 +59,7 @@ export default function Informazioni() {
         {/* SEZIONE 4: Foto panoramica */}
         <section className="relative w-full h-[350px] md:h-[550px] mb-16 md:mb-20 overflow-hidden rounded-2xl md:rounded-[40px] shadow-lg">
           <Image 
-            src="/pizza-salsiccia.jpg" 
+            src="/dolcecivico01.jpg" 
             alt="Dettaglio Pizza Gourmet Civico 2" 
             fill 
             className="object-cover transition-transform duration-700 hover:scale-105"
