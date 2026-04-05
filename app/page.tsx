@@ -286,7 +286,7 @@ export default function Home() {
 
     {/* Numero civico decorativo - Ridimensionato per mobile */}
     <span className="absolute -bottom-6 md:-bottom-10 -right-4 md:right-10 text-white/5 font-black text-[8rem] md:text-[15rem] select-none pointer-events-none leading-none">
-      02
+      CIVICO2
     </span>
   </div>
 </section>
