@@ -1,28 +1,31 @@
-import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import CookieBanner from "./components/CookieBanner";
-
-export const metadata = {
-  title: "Civico 2 | Ristorante",
-  description: "Tradizione e innovazione",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+if (SITO_IN_MANUTENZIONE) {
   return (
     <html lang="it">
-      <body>
-        <Header />
-        <main className="pt-20"> 
-          {/* pt-20 serve per non coprire il contenuto con l'header fisso */}
-          {children}
-        </main>
-        <Footer />
-        <CookieBanner />
+      <body
+        style={{
+          margin: 0,
+          width: "100%",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#ffffff",
+          color: "#111111",
+          fontFamily: "Arial, Helvetica, sans-serif",
+        }}
+      >
+        <h1
+          style={{
+            margin: 0,
+            padding: "24px",
+            textAlign: "center",
+            fontSize: "clamp(32px, 6vw, 64px)",
+            lineHeight: 1.1,
+            fontWeight: 700,
+          }}
+        >
+          Sito in manutenzione
+        </h1>
       </body>
     </html>
   );
